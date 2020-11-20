@@ -1,3 +1,3 @@
 # jira-github-action-integration-demo
 
-TG-10
+GIS-1 - testing smart commits
