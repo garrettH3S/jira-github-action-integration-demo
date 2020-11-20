@@ -38,6 +38,7 @@ jobs:
       id: push_build_info_to_jira
       uses: HighwayThree/jira-upload-build-info@master
       with:
+        cloud-instance-base-url: '${{secrets.CLOUD_ID}}' 
         client-id: '${{ secrets.CLIENT_ID }}'
         client-secret: '${{ secrets.CLIENT_SECRET }}'
         pipeline-id: '${{ github.repository }} ${{ github.workflow }}'
@@ -89,6 +90,7 @@ jobs:
         id: push_deployment_info_to_jira
         uses: HighwayThree/jira-upload-deployment-info@master
         with:
+          cloud-instance-base-url: '${{secrets.CLOUD_ID}}' 
           client-id: '${{ secrets.CLIENT_ID }}'
           client-secret: '${{ secrets.CLIENT_SECRET }}'
           deployment-sequence-number: '${{ github.run_id }}'
@@ -144,6 +146,7 @@ jobs:
         id: push_deployment_info_to_jira
         uses: HighwayThree/jira-upload-deployment-info@master
         with:
+          cloud-instance-base-url: '${{secrets.CLOUD_ID}}' 
           client-id: '${{ secrets.CLIENT_ID }}'
           client-secret: '${{ secrets.CLIENT_SECRET }}'
           deployment-sequence-number: '${{ github.run_id }}'
